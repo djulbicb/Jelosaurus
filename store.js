@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import default_user_data from './data_user.js'
+import default_user_data from './data/data_user.js'
 
 export const getUserSettings = async () => {
     return getData("userSettings").then((settings)=>{

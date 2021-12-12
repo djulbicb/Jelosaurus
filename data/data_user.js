@@ -1,6 +1,5 @@
 const userSettings = {
-    startDate: null,
-    totalDays : 0
+    startDate: null
 }
 
 export default userSettings

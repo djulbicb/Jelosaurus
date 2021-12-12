@@ -19,7 +19,7 @@ export default function App() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === common.MEAL) {
+            if (route.name === common.CALENDAR) {
               iconName = 'calendar'
             } else if (route.name === common.SETTINGS) {
               iconName = 'gear';
@@ -32,7 +32,7 @@ export default function App() {
           tabBarInactiveTintColor: 'gray',
         })}
       >
-        <Tab.Screen name={common.MEAL} component={HomeScreen} />
+        <Tab.Screen name={common.CALENDAR} component={HomeScreen} />
         <Tab.Screen name={common.SETTINGS} component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
