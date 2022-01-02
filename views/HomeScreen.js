@@ -26,6 +26,7 @@ const HomeScreen = () => {
     }
     const loadDrinks = (totalDayCount) => {
         const _drinks = menu.days[totalDayCount].drinks;
+        console.log(drinks)
         setDrinks(_drinks)
     }
 
@@ -125,6 +126,7 @@ const HomeScreen = () => {
             setTotalDays(newTotalDays)
             setTime(newTotalDays)
             loadMeal(newTotalDays)
+            loadDrinks(newTotalDays)
         }
     }
 
@@ -134,6 +136,7 @@ const HomeScreen = () => {
             setTotalDays(newTotalDays)
             setTime(newTotalDays)
             loadMeal(newTotalDays)
+            loadDrinks(newTotalDays)
         }
     }
 
@@ -200,7 +203,7 @@ const HomeScreen = () => {
                         </Col>
                     </Row>
                     <Row size={17}>
-                        <Col size={49}>
+                        <Col size={30}>
                             <Row size={50} style={{ alignItems: 'center', justifyContent: 'center' }}>
                                 <Text style={cssMenuTitle.title}>Budjenje</Text>
                             </Row>
@@ -211,12 +214,12 @@ const HomeScreen = () => {
                         <Col size={2}>
 
                         </Col>
-                        <Col size={49}>
+                        <Col size={70}>
                             <Row size={50} style={{ alignItems: 'center', justifyContent: 'center' }}>
                                 <Text style={cssMenuTitle.title}>Tokom dana</Text>
                             </Row>
                             <Row size={menuListSize} style={{ alignItems: 'center', justifyContent: 'center' }}>
-                                {listItems("Dorucak", drinks.day?.[0], { justifyContent: 'center' })}
+                                {listItems("Dorucak", drinks.day, { justifyContent: 'center' })}
                             </Row>
                         </Col>
                     </Row>
